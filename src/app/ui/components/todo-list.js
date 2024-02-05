@@ -28,6 +28,7 @@ export default function ToDoList() {
     setTodos(json)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedUpdateTodo = useCallback(
     debounce(updateTodo, 500),
     [updateTodo]
@@ -119,8 +120,8 @@ export default function ToDoList() {
       <div className={styles.mainInputContainer}>
         <input className={styles.mainInput} placeholder="Hacer la cama..." value={mainInput} onChange={(e) => handleMainInputChange(e)} onKeyDown={handleKeyDown}></input>
       </div>
-      {!todos && (
-        <div>Loading...</div>
+      {!todos === 0 && (
+        <div className={styles.loading}>Loading...</div>
       )}
       {todos && (
         <div>

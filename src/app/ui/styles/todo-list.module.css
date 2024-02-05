@@ -23,6 +23,11 @@
     margin: 20px 0;
   }
   
+  .loading {
+    color: grey;
+    margin-left: 20px;
+  }
+
   .mainInput {
     padding: 10px;
     margin: auto;
